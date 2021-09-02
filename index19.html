@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loop While</title>
+</head>
+  <script>
+
+    /*p -> parametro
+
+    for(p1;p2;p3){
+
+    }
+
+    p1;
+    while(p2){
+      p3;
+    }*/
+
+    //usar while quando não tiver certeza do numero de execuçoes
+
+    /*for(num=0;num<10;num++){
+      document.write(num+'<br>');
+    }*/
+
+    var num,cont;
+
+    //tradicional
+    num=0;
+    while(num<10){
+      document.write('Contando<br>');
+      num++;
+    }
+
+    document.write('<hr>')
+
+    //resumido
+    num=10;
+    while(num--){
+      document.write('Contando<br>')
+    }
+
+    document.write('<hr>')
+
+    //complexo, menos usual
+    num=true;
+    cont=0;
+    while(num){
+      document.write('Contando<br>');
+      cont++;
+      if(cont>9){
+        num=false;
+      }
+    }
+
+  </script>
+<body>
+  
+</body>
+</html>
