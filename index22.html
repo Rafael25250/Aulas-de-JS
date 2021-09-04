@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tratamento de erros</title>
+</head>
+<script>
+
+  var num;//máximo 10
+
+  try{
+    num=prompt("Digite um valor");
+    if(num>10){
+    throw new Error('Valor invalido, o valor deve ser menor ou igual a 10.');
+    }
+  }catch(e){//Será executado ao ocorrer um erro
+    console.log('Erro: '+e.message);
+    num=10;
+  }finally{//Será executado ocorrendo erro ou não
+    document.write('Valor '+ num);
+  }
+
+ /* try{
+    num=prompt("Digite um valor");
+    if(num>10){
+    throw new Error('Valor invalido, o valor deve ser menor ou igual a 10.');
+    }
+    document.write('Valor '+ num);
+  }catch(e){//Será executado ao ocorrer um erro
+    document.write('Erro: '+e.message);
+  }finally{//Será executado ocorrendo erro ou não
+    document.write('<br>Fim do tratamento');
+  }*/
+
+</script>
+<body>
+  
+</body>
+</html>
