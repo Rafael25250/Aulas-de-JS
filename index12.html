@@ -9,7 +9,7 @@
 
     var pos,msg,pontos;
 
-    pontos=200;
+    pontos=399;
 
     if(pontos >=1000){
       pos=1;
@@ -17,8 +17,8 @@
       pos=2;
     }else if(pontos >= 600) {
       pos=3;
-    }else{
-      pos=0;
+    }else if(pontos >= 400){
+      pos=4;
     }
 
     switch(pos){
@@ -31,6 +31,9 @@
       case 3:
         msg='Terceiro lugar<br>Medalha de bronze';
         break;
+      case 4:
+        msg='Quarto lugar<br> Chance de recolocação em outra peneira'
+        break;
       default:
         msg='Não foi ao pódio<br>Não obteve medalha';
     }
@@ -39,6 +42,7 @@
       case 1:
       case 2:
       case 3:
+      case 4:msg
           msg+='<br>Subiu ao pódio';
           break;
       default:
